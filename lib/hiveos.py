@@ -19,7 +19,7 @@ async def turnOffOS(farmID, workerID, APIKey):
         headers={"Authorization": "Bearer %s" % APIKey})
 
     postBody = {
-        "command": "sreboot shutdown",
+        "command": "shutdown",
         "data": {}
     }
 
