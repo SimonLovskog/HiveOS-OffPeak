@@ -10,8 +10,4 @@ async def getPrice(date):
     return await data.json()
 
 async def getCurrentPrice(data, date):
-    time = "{}:00".format(str(date.hour))
-    
-    for i in data:
-        if i["TimeStampHour"] == time:
-            return i["Value"]
+    return data[date.hour]["Value"]
